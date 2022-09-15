@@ -1,0 +1,106 @@
+.center_right{
+    background-color: #F6F6F7;
+}
+.main{
+    width: 90%;
+    margin: auto;
+}
+.main .upper{
+    height: 76px;
+}
+.main .upper  button{
+    margin-right: 10px;
+}
+.main .down{
+    display: flex;
+}
+.down .east .one{
+    border: 1px solid #EFEFF0;
+    margin: 0 10px 10px 0;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+}
+.down .east .two{
+    border: 1px solid #EFEFF0;
+    margin: 0 10px 10px 0;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+
+}
+.down .east .two .two_shipping h5{
+    margin-bottom: 20px;
+}
+.down .east .two .two_shipping input{
+   margin-right: 20px;
+   
+}
+.down .east .two .two_weight div{
+    padding-left: 0;
+    padding-top: 10px;
+
+}
+.down .east .two .two_weight input{
+    width: 40%;
+     height: 35px;
+      border-radius: 5px;
+     margin-right: 20px;
+}
+.down .east .two .custom span{
+    margin-left: 0;
+}
+
+
+.down .west .one {
+    border: 1px solid #EFEFF0;
+    background-color: #FFFFFF;
+    margin: 0 0 10px;
+    border-radius: 10px;
+    font-size: 14px;
+
+}
+
+.down .west .two{
+    border: 1px solid #EFEFF0;
+    background-color: #FAFBFB;
+    margin: 0 0 10px;
+    border-radius: 10px;
+    font-size: 14px;
+
+}
+.down .west .one div{
+    padding: 20px 20px 10px;
+}
+
+.down .west .two div{
+    padding: 20px 20px 10px;
+}
+.down .west .two .two_vendor #options{
+    background-color: #FFFFFF;
+    width: 100%;
+    list-style: none;
+}
+.down .west .two .two_vendor #options:hover{
+    background-color: #F6F6F7;
+}
+
+.down .west .two .two_vendor input, .down .west .two .two_collections input, .down .west .two .two_tags input {
+    width: 100%;
+    height: 40px;
+     border-radius: 5px;
+     border: 1px solid  #AEB4B9;
+}
+
+
+@media only screen and (max-width:1030px){
+    .down .east{
+        width:100%;
+    }
+    .down .west{
+        width: 100%;
+}
+.down{
+flex-direction: column; 
+}
+}

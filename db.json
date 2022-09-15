@@ -1,0 +1,77 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "title": "hiren",
+      "Description": "makani",
+      "product": "Draft",
+      "vendor": "ok",
+      "collection": "ok",
+      "tags": "ok",
+      "id": 1
+    },
+    {
+      "title": "drfyhyhfgh",
+      "Description": "gffdg",
+      "product": "Draft",
+      "vendor": "fghfhg",
+      "collection": "h",
+      "tags": "ghfgfh",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "title": "Raj",
+      "Description": "fcgbcfv",
+      "product": "Active",
+      "vendor": "fghgfh",
+      "collection": "gfhgf",
+      "tags": "tfyhf"
+    },
+    {
+      "id": 12,
+      "title": "gfhhgf",
+      "Description": "hgh",
+      "product": "Draft",
+      "vendor": "gfh",
+      "collection": "gfh",
+      "tags": "fhg"
+    },
+    {
+      "id": 18,
+      "title": "gh",
+      "Description": "ghf",
+      "product": "Active",
+      "vendor": "fg",
+      "collection": "ff",
+      "tags": "gf"
+    },
+    {
+      "title": "wsrfsfds",
+      "Description": "fdf",
+      "product": "Active",
+      "vendor": "dffsdf",
+      "collection": "fs",
+      "tags": "dsf",
+      "id": 19
+    },
+    {
+      "title": "esfd",
+      "Description": "dfgdg",
+      "product": "Draft",
+      "vendor": "hh",
+      "collection": "fh",
+      "tags": "gfh",
+      "id": 20
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

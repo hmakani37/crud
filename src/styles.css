@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+
+.center_left{
+    padding: 0 5px;
+    background-color: #F6F6F7;
+    border-right: 1px solid rgb(230, 223, 223);
+    /* height: 550px;
+    overflow-y: scroll; */
+    padding-top: 55px;
+}
+.center_left li i{
+    margin-right: 10px;
+    padding-bottom: 10px;
+    color: #5C5F62;
+}
+.center_left li, p i, span i{
+    color: #5C5F62;
+}
+.center_left li{
+    list-style: none;
+}
+.center_left ul li a{
+    text-decoration: none;
+}
+.center_left .sub li a{
+    color: #6D7175;
+}
+.center_left li span{
+    float: right;
+    padding: 2px 8px;
+    background-color:#E4E5E7;
+    border-radius: 15px; 
+    font-size: small;
+}
+.center_left .gamma i{
+    padding-right: 10px;
+}
+.center_left li:hover{
+    background-color: #F1F2F3;
+}
+
+/* media query */
+
+
+@media only screen and (max-width:1060px){
+    .text-end .btn1, .text-end .btn2{
+        display: none;
+    }
+}
+@media only screen and (max-width:760px){
+    .third .small{
+        display: none;
+    }
+    .center_left_hidden{
+        margin-top: -50px;
+    }
+    .logo{
+        display: none;
+    }
+    /* .dropdown .icon{
+        display: block ;
+    } */
+    .dropdown-toggle{
+        display: block;
+    }
+
+.center_left {
+    display: none;
+}
+/* .center_right{
+    width: 100%;
+} */
+/* .center-upper .button_display{
+    display: block;
+} */
+.center-upper .btn1, .center-upper .btn2, .center-upper .btn3{
+    display: none;
+}
+
+.dropdown1 .center_left_hidden{
+    background-color: whitesmoke;
+}
+}
+@media only screen and (max-width:520px){
+ .center-down{
+    margin: 0;
+}
+.center-down .third .saved{
+    display: none;
+}
+/* .center-down .none .four .four_one, .center-down .none .four button{
+    display: block;
+} */
+.hadder{
+    display: none;
+}
+.hadder_body input{
+    display: none;
+}
+ .hadder_body .type, .hadder_body .vendor{
+    display: none;
+}
+.center-down .third .third_sub{
+    display: none;
+}
+
+}
+
+
+@media only screen and (max-width:1150px){
+    .none .tagged{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:880px){
+       .none .vendor{
+        display: none;
+       }
+}
+

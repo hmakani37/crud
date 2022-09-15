@@ -1,0 +1,218 @@
+<div class="center_right py-5">
+
+    <div class="main">
+        <div class="upper pt-3">
+          <button class="btn border" routerLink="/center-right"><i class="fa-solid fa-left-long"></i></button>
+          <label for="" style="font-size: 20px;"><b> Add product</b> </label>
+        </div>
+
+        <form [formGroup]="createForm" novalidate #localForm="ngForm">
+           <div class="down">
+          
+          <div class="east col-8">
+              <div class="one p-3">
+                  <div class="mb-3 ">
+                      <p>Title</p>
+                      <input type="text" class="form-control" [class.is-invalid]="localForm.submitted && createForm.get('title')?.invalid" formControlName="title"
+                      placeholder="Short sleeve t-shirt " aria-label="Username" aria-describedby="basic-addon1">
+                      <div style="color: red;" class="invalid-feedback">title should be only alphabetical order.</div> 
+                    </div>
+                    
+                  <div class=" mb-3 ">
+                      <p>Description</p>
+                      <textarea class="form-control"[class.is-invalid]="localForm.submitted && createForm.get('Description')?.invalid" 
+                      formControlName="Description" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                      <div style="color: red;" class="invalid-feedback">Description should be alphabetical or numeric order.</div> 
+                  </div>
+              </div>
+
+              <div class="two">
+                  <div class="two_shipping p-3">
+                      <h6>Shipping</h6>
+                      <input type="checkbox" id="myCheck" onclick="shoppingcartFunction()"><label for=""> This is a physical product</label>
+                  </div>
+                  <hr>
+                  <div class="two_disapper" id="text" style="display:none" >
+                      <div class="two_weight px-3">
+                          <h6>WEIGHT</h6>
+                          <span>Used to calculate shipping rates at checkout and label prices during fulfillment.</span>
+                          <p style="margin-bottom: 0;"> weight</p>
+                          <div style="display: flex;">
+                              <input type="text"  class=""  name="" id="" placeholder="0.0">
+                              <select class="form-select mb-3" style="width: 20%; height: 35px;" aria-label=".form-select-lg example">
+                                  <option value="0">lb</option>
+                                  <option value="1">oz</option>
+                                  <option value="2">kg</option>
+                                  <option value="3">g</option>
+                               </select>
+                          </div>
+                      </div>
+                      <hr>
+                      <div class="custom p-3 pt-0">
+                          <h6>CUSTOMS INFORMATION</h6>
+                          <p>Customs authorities use this information to calculate duties when shipping internationally. Shown on printed customs forms.</p>
+                          <span><label for="">Country/Region of origin</label></span>
+                          <select class="form-select" aria-label="Default select example">
+                              <option selected disabled>select country/origin</option>
+                              <option value="1">Afghanistan</option>
+                              <option value="2">Albart island</option>
+                              <option value="3">Albania</option>
+                              <option value="3">Algaria</option>
+                              <option value="3">Andorra</option>
+                              <option value="3">Angola</option>
+                              <option value="3">Anguilla</option>
+                              <option value="3">Argentina</option>
+                              <option value="3">Armeniya</option>
+                              <option value="3">Aruba</option>
+                        </select>
+                          <span>In most cases, where the product is manufactured.</span>
+                      
+                          <div class="pt-3 " style="padding-left: 0;">
+                              <span>HS (Harmonized System) code</span>
+                              <input type="text" class="form-control" placeholder="search or enter a HS code" aria-label="Username" aria-describedby="basic-addon1">
+                              <span>Manually enter codes that are longer than 6 numbers.</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="px-3" id="text2" style="display: none;">
+                      <p>Customers won’t enter their shipping address or choose a shipping method when buying this product.</p>
+                  </div>
+
+              </div>
+          </div>
+
+          <div class="west col-4">
+              <div class="one">
+                  <div class="one_product pb-0">
+                      <h6>Product status</h6>
+                      <select class="form-select form-select-lg mb-3" [class.is-invalid]="localForm.submitted && createForm.get('product')?.invalid" 
+                      formControlName="product"  id="product" aria-label=".form-select-lg example ">
+                          <option value="Active" selected>Active</option>
+                          <option value="Draft">Draft</option>
+                     </select>
+                      <span style="color: red;" class="invalid-feedback">product should not be empty</span> 
+                      <p>this product will be availableto 2 sales channels. </p>
+                  </div>
+                  <hr>
+                  <div class="one_sales pt-0">
+                      <p>SALES CHANNELS AND APPS</p>  
+                      <div class="p-0" >
+                          <a name="sales_store" id="select_01" onclick="selectAll()">Select All</a>
+                          <a style="display: none;"  name="sales_store" id="deselect_02" onclick="deselectAll()">DeSelect All</a>
+                        </div>
+                       <hr> 
+                      <input type="checkbox"  id="selectone_1" name="sales_store" onclick="selectone()">
+                      <label for="sales_store">Online store</label>
+                      <a href="#" id ="schedule" style="display: none; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          schedule availability
+                      </a>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Schedule Online Store availability</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="two">
+                                      <p>Product will be available on</p>
+                                      <input type="date" id="start" name="trip-start" value="2018-07-22" 
+                                      min="2018-01-01" max="2025-12-31">
+                                      <!-- <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>   -->
+                                  </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      <br>
+                      <input type="checkbox" name="sales_store" id="selectone_1">
+                      <label for="sales_store">abc app</label>
+                      <div id="checkbox_err" ></div> 
+
+                  </div>
+              </div>
+            
+              <div class="two">
+                  <div class="two_vendor" >
+                           <h5>Product organization</h5>
+                          <p class="mb-0">vendor</p>
+                          <input type="text" formControlName="vendor" [class.is-invalid]="localForm.submitted && createForm.get('vendor')?.invalid"  
+                           name="" id="vendor" autocomplete="off" onkeyUp="document.getElementById('printchatbox').innerHTML =  this.value">
+                          <span class='printchatbox' id='printchatbox'></span>
+                          <span style="color: red;" class="invalid-feedback">vendor should be alphabetical order.</span> 
+                        
+                  </div>
+                  <div class="two_collections pt-0">
+                      <p class="mb-0">Collections</p> 
+                          <input  list="browsers1" formControlName="collection" [class.is-invalid]="localForm.submitted && createForm.get('collection')?.invalid" 
+                          autocomplete="off" name="myBrowser" id="collection" type='text' name='fname' class='chatinput' onkeyUp="document.getElementById('printchatbox1').innerHTML = this.value">
+                          <span class='printchatbox' id='printchatbox1' ></span>
+                          <span style="color: red;" class="invalid-feedback">collection should be alphabetical order.</span> 
+                          <!-- <datalist id="browsers1" >
+                              <option value="Chrome">
+                          </datalist> -->
+                        
+                  </div>
+                  <div class="pt-0 two_tags">
+                      <div class="p-0">
+                          <p class="mb-0">Tags
+                              <a href="#" style="float: right; text-decoration: none;"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                  Manage tag
+                              </a>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Manage tags    </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body d-flex">
+                                          <div class="input-group mb-3" style="width: 60%;">
+                                              <div class="input-group-text">
+                                                  <i class="fa fa-magnifying-glass"></i>
+                                              </div>
+                                              <input type="text" class="form-control" aria-label="Text input with checkbox">
+                                            </div>
+                                            <select class="form-select mt-3" style="width: 35%; height: 48px;" aria-label="Default select example">
+                                              <option value="2">Alphabetical</option>
+                                              <option value="3">Frequently Used</option>
+                                            </select>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                      </div>
+                      <input type="text" formControlName="tags" [class.is-invalid]="localForm.submitted && createForm.get('tags')?.invalid" 
+                       id="tags" autocomplete="off" placeholder="Find or create tags">
+                       <span style="color: red;" class="invalid-feedback">tags should be alphabetical value.</span> 
+                  </div>
+              </div>
+          </div>
+            </div>
+            <hr>
+           <div class="save">
+            <button type="submit" *ngIf="showAdd" (click)="onSubmit()" class=" me-3 btn btn-primary" style="float: right;" >save</button>
+            <button type="submit" *ngIf="showbtn" (click)="onUpdate()" class="btn btn-success" style="float: right;">Update</button>
+          </div>
+        </form>
+
+    </div>
+  </div>
+  
+  
+  
+  

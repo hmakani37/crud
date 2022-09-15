@@ -1,0 +1,18 @@
+.gutterFix{
+    --bs-gutter-x: 0
+}
+
+.side-left{
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+.side-right{
+    width: 80%;
+    flex: 0 0 auto;
+}
+@media only screen and (max-width:760px){
+    .side-right{
+        width: 100%;
+        }
+}

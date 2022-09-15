@@ -1,0 +1,281 @@
+<div class="center_right">
+
+    <div class=" center-upper d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+      <h3 class="h5" >Products</h3>
+      <div class="btn-toolbar mb-2 mb-md-0">
+          <button type="button" class="btn btn-sm btn1">Exports</button>
+          <button type="button" class="btn btn-sm btn2">Imports</button>
+          <button type="button" class="btn btn-sm btn3">More actions</button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary button_display rounded" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Export</a></li>
+              <li><a class="dropdown-item" href="#">Import</a></li>
+              <li><a class="dropdown-item" href="#">More Actions</a></li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-sm btn-success"  routerLink="/create-data">Add products</button>
+      </div>
+    </div>
+
+  <div class="center-down">
+    <div class="one">
+      <ul class="nav col-12 col-lg-auto me-lg-auto pt-2 px-2 justify-content-start border-bottom">
+        <li><a href="#" class="nav-link px-2 link-secondary active">All</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Active</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Draft</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Archived</a></li>
+      </ul>
+    </div>
+
+    <div class="d-flex justify-content flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 px-3 none">
+      <div class="d-flex align-items-center col-5 first" style="flex-grow: 1;">
+        <form class="w-100 me-3 input-group" role="search">
+        <span class="input-group-text bg-white"> <i class="fa fa-magnifying-glass"></i></span>
+          <input type="text" class="form-control" placeholder="Filter product" aria-label="Server">
+        </form>
+        </div>
+
+      <div class="btn-toolbar btn-group btn-outline-secondary  mb-md-0 col-5  second" style="width: max-content;" >
+
+        <div class="dropdown vendor">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Product vendor
+          </button>
+          <ul class="dropdown-menu">
+            <span><input type="radio"> <label for="">peakFinds</label></span> <br>
+            <span><input type="radio"> <label for="">Rubby App store</label></span>
+            clear
+          </ul>
+        </div>
+
+        <div class="dropdown tagged">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tagged with
+          </button>
+          <ul class="dropdown-menu">
+            <input type="text" style="width: 80%; margin-left: 10%;">
+            <p style="margin:15px 0 0 15px ;"> clear</p>
+          </ul>
+        </div>
+             
+
+              <button class="btn btn-outline-secondary rounded filter" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">More filter</button>
+
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">More filter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <hr>
+                <div class="offcanvas-body sidebar">
+        
+                    <p>
+                        <button class="btn btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                          <span style="float: left;"> Product vendor</span> <span style="float: right;"><i class="fa fa-caret-down"></i></span>
+                        </button>
+                        <div class="collapse" id="collapseExample1">
+                          <div class="card card-body">
+                              <span><input type="radio"> <label for="">peakFinds</label></span> 
+                              <span><input type="radio"> <label for="">Rubby App store</label></span>
+                              clear
+                          </div>
+                        </div>
+                 
+          
+        
+                      <p>
+                        <button class="btn btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                         <span style="float: left;"> Tagged with</span> <span style="float: right;"><i class="fa fa-caret-down"></i></span>
+                        </button>
+                        <div class="collapse" id="collapseExample2">
+                          <div class="card card-body">
+                               <input type="text">
+                               clear
+                          </div>
+                        </div>
+                     
+          
+        
+                    
+                      <p>
+                        <button class="btn btn1 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                         <span style="float: left;"> Status </span> <span style="float: right;"><i class="fa fa-caret-down"></i></span>
+                         </button>
+                        <div class="collapse" id="collapseExample3">
+                          <div class="card card-body">
+                            <span><input type="checkbox" name="" id="">  <label for=""> Active</label></span> 
+                             <span><input type="checkbox" name="" id=""> <label for=""> Draft</label></span>
+                             <span><input type="checkbox" name="" id=""> <label for=""> Archived</label></span>
+                             clear
+                          </div>
+                        </div>
+                     
+                    
+                      <p>
+                        <button class="btn btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+                         <span style="float: left;"> Availability</span> <span style="float: right;"><i class="fa fa-caret-down"></i></span>
+                        </button>
+                        <div class="collapse" id="collapseExample4">
+                          <div class="card card-body">
+                             <span><input type="radio"> <label for="">unavailable on all channels</label></span>
+                             <span><input type="radio"> <label for="">available on online store</label></span>
+                             <span><input type="radio"> <label for="">Unavailable on online store</label></span>
+                             <span><input type="radio"> <label for="">available on abc app</label></span>
+                             <span><input type="radio"> <label for="">unavailable on abc app</label></span>
+                             clear
+                          </div>
+                        </div>
+                     
+          
+        
+                      
+                      <p>
+                        <button class="btn btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
+                         <span style="float: left;"> Product type</span> <span style="float: right;"><i class="fa fa-caret-down"></i></span>
+                        </button>
+                        <div class="collapse" id="collapseExample5">
+                          <div class="card card-body">
+                              <span><input type="radio"> <label for="">Snowboard</label></span>
+                             <p>clear</p> 
+                          </div>
+                        </div>
+                 
+          
+                    
+                      <p>
+                        <button class="btn btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                         <span style="float: left;"> Collection</span> <span style="float: right;"><i class="fa fa-caret-down"></i></span>
+                        </button>
+                      </p>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                      </div>
+          
+        
+                    
+                      <p>
+                        <button class="btn btn1 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample">
+                         <span style="float: left;"> Publishing error</span> <span style="float: right;"><i class="fa fa-caret-down"></i></span>
+                        </button>
+                        <div class="collapse" id="collapseExample7">
+                          <div class="card card-body">
+                            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                          </div>
+                        </div>
+                   
+          
+        
+                      <p>
+                        <button class="btn btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample8" aria-expanded="false" aria-controls="collapseExample">
+                         <span style="float: left;"> Gift card</span>  <span style="float: right;"><i class="fa fa-caret-down"></i></span>
+                       </button>
+                        <div class="collapse" id="collapseExample8">
+                          <div class="card card-body">
+                            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                          </div>
+                        </div>
+                      
+          
+        
+                    <hr>
+        
+                    <button type="button" class="btn btn-outline-secondary disabled">Clear all filters</button>
+                    <button type="button" class="btn btn-success" style="float: right;">Done</button>
+                    
+                </div>
+            </div>
+
+              
+        </div>
+        
+        <div class="col-2 d-flex justify-content-end third" style="width: max-content;">
+            <button type="button" class="btn  btn-outline-secondary  ms-2 me-2 " 
+            style="--bs-btn-padding-x:.5rem; --bs-btn-font-size:0.875rem;" disabled><i class="fa-solid fa-star p-1"></i><span class="saved"> Saved </span></button>
+         
+            <div class="dropdown">
+              <button class="btn btn-outline-secondary third_sub " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sort
+              </button>
+                  <ul class="dropdown-menu px-2" style="height: 320px;width: 180px; overflow-y: scroll;">
+                  <p>Sort</p>
+                       <input type="radio"> <label for="">Product title A-Z</label><br>
+                       <input type="radio"> <label for="">Product title A-Z</label><br>
+                       <input type="radio"> <label for="">Product title A-Z</label><br>
+                       <input type="radio"> <label for="">Product title A-Z</label><br>
+                       <input type="radio"> <label for="">Product title A-Z</label><br>
+                       <input type="radio"> <label for="">Product title A-Z</label><br>
+                       <input type="radio"> <label for="">Product title A-Z</label><br>
+                       <input type="radio"> <label for="">Product title A-Z</label><br>
+                       <input type="radio"> <label for="">Product title A-Z</label><br>
+                      <input type="radio"> <label for="">Product title A-Z</label><br>
+                      <input type="radio"> <label for="">Product title A-Z</label><br>
+                      <input type="radio"> <label for="">Product title A-Z</label><br>
+                      <input type="radio"> <label for="">Product title A-Z</label><br>
+                      <input type="radio"> <label for="">Product title A-Z</label><br>
+                      <input type="radio"> <label for="">Product title A-Z</label><br>
+                      <input type="radio"> <label for="">Product title A-Z</label><br>
+                      <input type="radio"> <label for="">Product title A-Z</label><br>
+                      <input type="radio"> <label for="">Product title A-Z</label><br>
+            </ul>
+          </div>
+      </div>
+
+      <div class="four d-flex py-2 " style="width: 100%;">
+
+        <div class="col-8 four_one">
+          <select class="browser-default custom-select rounded" style="width: 100%; margin-right: 20px; height: 36px;">
+            <option selected="">Product titlt A-Z</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-4 d-flex justify-content-end four_two" >
+            <button  type="button" class="btn btn-outline-secondary" style="width: 95%;"> Select <i class="fa-solid fa-caret-down"></i></button>
+        </div>
+    </div>
+
+      </div>
+
+      <table class="table mt-4">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">title</th>
+            <th scope="col">Description</th>
+            <th scope="col">product</th>
+            <th scope="col">vendor</th>
+            <th scope="col">collection</th>
+            <th scope="col">tags</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of allRestaurentData">
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.Description}}</td>
+            <td>{{data.product}}</td>
+            <td>{{data.vendor}}</td>
+            <td>{{data.collection}}</td>
+            <td>{{data.tags}}</td>
+            <td>
+              <button class="btn btn-info"  routerLink="/create-data/{{data.id}}"  data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Edit</button>&nbsp;
+              <button class="btn btn-danger" (click)="deleted(data)">Delete</button>
+      
+            </td>
+          </tr>
+      
+        </tbody>
+      </table>   
+    </div>
+    <div class="footer">
+      <p>Learn more about products</p>
+    </div>
+  </div>
